@@ -9,12 +9,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.editMode) var editMode
     @State var viewMode: Int = 0
+
     var body: some View {
         VStack {
             HStack {
                 Button {
                     viewMode = 0
+                    // editMode to .inactive
+                    editMode?.wrappedValue = .inactive
                 } label: {
                     Text("View1")
                 }
@@ -22,6 +26,8 @@ struct ContentView: View {
                     .frame(width: 30)
                 Button {
                     viewMode = 1
+                    // editMode to .inactive
+                    editMode?.wrappedValue = .inactive
                 } label: {
                     Text("View2")
                 }
@@ -32,7 +38,6 @@ struct ContentView: View {
                 Demo2View()
             }
         }
-
     }
 }
 
