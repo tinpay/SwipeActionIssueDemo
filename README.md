@@ -17,7 +17,7 @@ In case of iOS16, this kind of problem does not occur
 
 Setting @Environment editMode to .inactive when switching views solves the problem
 
-https://github.com/tinpay/SwipeActionIssueDemo/pull/1/commits/e3bf597efb013d1de7c02511e62791bd575d40d7
+e3bf597
 
 ```swift
     @Environment(\.editMode) var editMode
